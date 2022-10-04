@@ -1,0 +1,42 @@
+@keyframes arrowDown {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+@keyframes arrowMove {
+	0% {
+		width: 6rem;
+	}
+	20% {
+		width: 6rem;
+	}
+	60% {
+		width: 9rem;
+	}
+	80% {
+		width: 6rem;
+	}
+	90% {
+		width: 7rem;
+	}
+	100% {
+		width: 6rem;
+	}
+}
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+@keyframes navLine {
+	from {
+		transform: scaleY(0);
+		transform-origin: center;
+	}
+	to {
+		transform: scaleY(1);
+	}
+}

@@ -1,0 +1,45 @@
+a {
+	text-decoration: none;
+	color: #fff;
+	// color: #000;
+	&:active {
+		color: #2c3e50;
+	}
+}
+ul {
+	list-style: none;
+}
+button {
+	background-color: transparent;
+}
+h1,
+h2,
+h3 {
+	font-family: 'Roboto Mono', monospace;
+}
+h2,
+h3 {
+	color: rgb(21, 15, 104);
+}
+h2 {
+	padding: 4rem;
+	font-size: 3rem;
+}
+p {
+	font-size: 1.6rem;
+}
+section {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.line {
+	height: 1px;
+	width: 100%;
+	background: #777;
+	margin: 2rem 0;
+}
+span.blinker {
+	animation: blinker 0.8s linear infinite;
+}

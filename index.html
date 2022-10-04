@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome On My Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@200;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+
+<body>
+
+    <header id="header" class="header">
+        <div class="header-shadow"></div>
+        <nav class="nav-mobile">
+            <ul class="nav-mobile__list">
+                <a class="active" href="#header" onclick="void(0)">
+                    <li class="nav-mobile__list-item">Home</li>
+                </a>
+                <a href="#about-me" onclick="void(0)">
+                    <li class="nav-mobile__list-item">O mnie</li>
+                </a>
+                <li class="nav-mobile__list-item-one"><a class="nav-mobile__list-item-projects" href="#projects"
+                        onclick="void(0)">Projekty</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </li>
+                <ul class="nav-mobile__list-two">
+                    <a href="https://zkuba94.github.io/Calculator/" target="_blank" onclick="void(0)">
+                        <li class="nav-mobile__list-item nav-mobile__list-two-item">Kalkulator</li>
+                    </a>
+                    <a href="https://zkuba94.github.io/ToDo-List/" target="_blank" onclick="void(0)">
+                        <li class="nav-mobile__list-item nav-mobile__list-two-item">To Do Lista</li>
+                    </a>
+                    <a href="#" onclick="void(0)">
+                        <li class="nav-mobile__list-item nav-mobile__list-two-item">Projekt 3</li>
+                    </a>
+
+                </ul>
+                <a href="#contact" onclick="void(0)">
+                    <li class="nav-mobile__list-item">Kontakt</li>
+                </a>
+                <a href="#" onclick="void(0)">
+                    <li class="nav-mobile__list-item">Motyw</li>
+                </a>
+            </ul>
+            <button class="nav-mobile__btn" onclick="void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <polyline points="9 6 15 12 9 18"></polyline>
+                </svg>
+            </button>
+        </nav>
+
+        <div class="header__textarea">
+            <h1 class="header__textarea-title"></h1>
+            <a href="#about-me" class="header__arrow">
+                <div class="header__arrow-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-down"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <polyline points="7 7 12 12 17 7"></polyline>
+                        <polyline points="7 13 12 18 17 13"></polyline>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-me" class="about-me">
+            <h2 class="about-me__title">O mnie</h2>
+            <div class="about-me__textarea">
+                <h3 class="about-me__textarea-title">Coś tam</h3>
+                <p class="about-me__textarea-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aliquam
+                    commodi ipsam dicta perspiciatis. Placeat est aut illum, nisi a id velit blanditiis autem nobis
+                    incidunt voluptatem aperiam dolorum fugiat sed numquam, nam rem totam suscipit animi eaque odio
+                    voluptatibus! Itaque modi sint expedita ipsum explicabo quos totam minima quis.</p>
+                <div class="about-me__img"></div>
+                <h3 class="about-me__textarea-title">Coś tam</h3>
+                <p class="about-me__textarea-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia,
+                    magni! In voluptate doloribus excepturi ex saepe ipsa provident ad maxime quo asperiores reiciendis
+                    optio iure fugit deleniti ratione reprehenderit blanditiis magni voluptatum neque, explicabo
+                    perspiciatis deserunt! Accusantium natus neque nam amet voluptatibus ratione consequatur iure
+                    aliquam? Ratione reiciendis aperiam ut.</p>
+            </div>
+
+            <div class="line"></div>
+
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="projects__title">Projekty</h2>
+            <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sapiente
+                voluptas quis sunt, voluptate veniam?</p>
+            <div class="projects__boxes">
+
+                <div class="projects__boxes-shadow"></div>
+
+                <a href="https://zkuba94.github.io/Calculator/" class="projects__boxes-project-box one">
+                    <h3 class="projects__boxes-project-title">Kalkulator
+                    </h3>
+                    <div class="projects__boxes-project-one"></div>
+                </a>
+
+                <a href="https://zkuba94.github.io/ToDo-List/" class="projects__boxes-project-box two">
+                    <h3 class="projects__boxes-project-title">To Do
+                        Lista</h3>
+                    <div class="projects__boxes-project-two"></div>
+                </a>
+
+                <a href="#" class="projects__boxes-project-box three">
+                    <h3 class="projects__boxes-project-title">Projekt 3</h3>
+                    <div class="projects__boxes-project-three"></div>
+                </a>
+
+            </div>
+            <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sapiente
+                voluptas quis sunt, voluptate veniam?</p>
+            <div class="line"></div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact__form">
+                <p class="contact__form-text">Napisz do mnie!</p>
+                <form action="#" class="form">
+                    <label for="name">Imię:</label>
+                    <input type="name" id="name">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email">
+                    <label for="message">Wpisz wiadomość:</label>
+                    <textarea name="message" id="message"></textarea>
+                    <button class="btn-send" onclick="void(0)">Wyślij!</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer id="footer" class="footer">
+
+        <div class="line"></div>
+
+        <div class="footer__data">
+            <div class="footer__data-box-one">
+                <p>Jakub Żurawski</p>
+                <p>+48 602 731 377</p>
+                <p>Kielce, 25-645</p>
+                <p class="footer__data-box-one-mail">zkuba94@gmail.com<a href="mailto:zkuba94@gmail.com"><svg
+                            xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                            <polyline points="3 7 12 13 21 7"></polyline>
+                        </svg></a></p>
+            </div>
+            <div class="footer__data-box-two">
+                <a href="https://www.linkedin.com/in/kuba-%C5%BCurawski-9a07b0170" target="_blank"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                        <line x1="8" y1="11" x2="8" y2="16"></line>
+                        <line x1="8" y1="8" x2="8" y2="8.01"></line>
+                        <line x1="12" y1="16" x2="12" y2="11"></line>
+                        <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                    </svg></a>
+                <a href="https://github.com/ZKuba94" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
+                        </path>
+                    </svg></a>
+                <a href="https://wa.me/48602731377"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+                        <path
+                            d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1">
+                        </path>
+                    </svg></a>
+                <a href="https://www.instagram.com/zkubas/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+                    </svg></a>
+                <a href="https://www.facebook.com/jakub.zurawski.9" target="_blank"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                    </svg></a>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="footer__copyright">
+            <p class="footer__copyright-p">&copy;<span class="footer__copyright-year"></span> All rights reserved.
+                Designed and Created by Jakub
+                Żurawski.</p>
+        </div>
+    </footer>
+
+    <script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>

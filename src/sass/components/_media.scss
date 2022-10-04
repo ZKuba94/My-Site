@@ -1,0 +1,41 @@
+@media (min-width: 576px) {
+	.header .header__textarea .header__textarea-title {
+		font-size: 3.5rem;
+	}
+	.projects .projects__boxes {
+		flex-direction: row;
+		&-project-box {
+			margin-inline: 1rem;
+		}
+	}
+}
+@media (min-width: 768px) {
+	header.header {
+		background-image: url('../img/leonhard-1920.jpg');
+		.header__textarea .header__textarea-title {
+			font-size: 4rem;
+		}
+		.nav-mobile {
+			width: 20vw;
+			left: -20vw;
+			&__btn {
+				left: 20vw;
+			}
+		}
+	}
+	div.about-me__img {
+		background-image: url(../img/malik-1920.jpg);
+	}
+	.projects .projects__boxes {
+		background-image: url('../img/santorini_1920.jpg');
+		&-project-box {
+			width: 25%;
+		}
+	}
+}
+@media (min-width: 992px) {
+	section.contact {
+		width: 100%;
+		padding-inline: 10%;
+	}
+}

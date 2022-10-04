@@ -1,0 +1,390 @@
+@use 'components/index' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	font-display: swap;
+}
+html {
+	height: 100%;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	color: $second-color;
+	background-image: $third-linear;
+	main {
+		max-width: 1200px;
+		margin: auto;
+	}
+}
+.header {
+	position: relative;
+	background-image: url('../img/shaain-ibrahim-640.jpg');
+	color: $first-color;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 1;
+	&-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: $first-linear;
+		z-index: -1;
+	}
+	&__textarea {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: 'Roboto Mono', monospace;
+		margin: 0 6rem;
+		font-weight: 200;
+		&-title {
+			text-align: left;
+			font-size: 2.8rem;
+			font-weight: 200;
+		}
+	}
+	&__arrow {
+		height: 14rem;
+		width: 10rem;
+		transform: translateY(50%);
+		&-item {
+			height: 14rem;
+			width: 10rem;
+		}
+		.icon {
+			animation: arrowDown 1.5s ease infinite alternate;
+			height: 7rem;
+			width: 10rem;
+		}
+	}
+	.nav-mobile {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		font-size: 2rem;
+		height: 100vh;
+		width: 40vw;
+		left: -40vw;
+		border: none;
+		background-color: $third-color;
+		transition: transform 0.4s;
+		overflow: visible;
+		z-index: 10;
+		&__list {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: left;
+			list-style: none;
+			height: 100%;
+			z-index: 10;
+			a.active {
+				position: relative;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 2px;
+					background-color: $first-color;
+					animation: navLine 0.3s linear;
+				}
+			}
+
+			&-item {
+				padding: clamp(0.4rem, 2vh, 4vh);
+			}
+			&-item-one {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.icon-tabler-chevron-down {
+				height: 100%;
+				width: 100%;
+				cursor: pointer;
+			}
+			&-item-projects {
+				padding: clamp(0.4rem, 2vh, 4vh);
+			}
+
+			a:hover,
+			.icon-tabler-chevron-down:hover {
+				background-color: $fourth-color;
+				border-radius: 8px;
+			}
+			&-two {
+				display: none;
+				margin-left: 1rem;
+				&-item:hover {
+					background-color: $fourth-color;
+					border-radius: 8px;
+				}
+			}
+			&-two-show {
+				display: block;
+			}
+		}
+		.nav-mobile__list-item-li {
+			margin-top: 2rem;
+		}
+		&__btn {
+			position: absolute;
+			top: 25vh;
+			left: 40vw;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			padding-right: 1rem;
+			width: 4rem;
+			height: 5rem;
+			border-radius: 0 8px 8px 0;
+			border: none;
+			background-color: $third-color;
+			color: $first-color;
+			animation: arrowMove 4s ease-in infinite;
+			transition: right 0.3s, transform 0.3s;
+			cursor: pointer;
+			z-index: 9;
+			&:hover {
+				background-color: $fourth-color;
+			}
+			.icon {
+				width: 4rem;
+				height: 4rem;
+				margin-right: 1rem;
+				transition: transform 0.3s;
+				transform: translateX(2.5rem);
+				z-index: 9;
+			}
+			.chevron-right-rotate {
+				transform: translateX(2.5rem) rotateY(180deg);
+			}
+		}
+	}
+}
+.about-me {
+	&__textarea {
+		&-title {
+			font-size: 2.5rem;
+			margin-bottom: 1rem;
+			padding-left: 10%;
+		}
+		&-p {
+			padding-left: 5%;
+			padding-right: 5%;
+			margin-bottom: 1rem;
+			text-align: justify;
+		}
+	}
+	&__img {
+		margin: 2rem 0;
+		position: relative;
+		height: 300px;
+		width: 100%;
+		background-image: url(../img/malik-640.jpg);
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		z-index: 0;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: $first-linear;
+			z-index: -1;
+		}
+	}
+}
+.projects {
+	&__title {
+		padding-bottom: 1rem;
+	}
+	&__text {
+		padding-left: 5%;
+		padding-right: 5%;
+		margin-bottom: 3rem;
+		margin: 4rem 5%;
+		text-align: justify;
+	}
+	&__boxes {
+		position: relative;
+		background-image: url('../img/leonhard--640.jpg');
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		height: auto;
+		padding-block: 3rem;
+		z-index: 0;
+		&-shadow {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-image: $first-linear;
+			z-index: -1;
+		}
+		&-project-title {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			font-size: 3rem;
+		}
+		&-project-box {
+			background: $first-color;
+			opacity: 0.8;
+			width: 80%;
+			height: 20rem;
+			padding: 2rem 2rem;
+			margin: clamp(2rem, 20%, 4rem) clamp(2rem, 20%, 4rem);
+			background-size: cover;
+			background-position: center;
+			cursor: pointer;
+		}
+		.one {
+			background-image: url('../img/foto1.png');
+			.projects__boxes-project-title {
+				color: #fff;
+			}
+		}
+		.two {
+			background-image: url('../img/foto2.png');
+		}
+		.three {
+			background-image: url('');
+		}
+	}
+}
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	&__form {
+		width: 100%;
+		&-text {
+			font-size: 2.5rem;
+			margin: 2rem 0 0 2rem;
+		}
+		.form {
+			display: flex;
+			flex-direction: column;
+			margin: 2rem;
+			font-size: 1.6rem;
+			label {
+				margin-block: 1rem;
+			}
+			input {
+				border-radius: 5px;
+				padding: 0.8rem;
+			}
+			textarea {
+				border-radius: 5px;
+				padding: 0.8rem;
+				margin-inline: auto;
+				min-width: 100%;
+				max-width: 100%;
+				min-height: 80px;
+				max-height: 200px;
+				// width: clamp(60%, 80vw, 80rem);
+			}
+			.btn-send {
+				transform: translateX(50%);
+				margin-top: 2rem;
+				font-size: 1.1em;
+				padding: 1em;
+				width: 50%;
+				background-color: $third-color;
+				color: $first-color;
+				border-radius: 8px;
+				cursor: pointer;
+				&:hover {
+					background-color: $fourth-color;
+				}
+			}
+		}
+	}
+}
+.footer {
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+	margin: auto;
+
+	&__data {
+		display: flex;
+		width: 100%;
+		&-box-one {
+			text-align: center;
+			margin: 2rem 0 2rem 0;
+			width: 50%;
+			line-height: 2.5rem;
+			&-mail {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.icon {
+				margin-left: 0.5rem;
+				color: $second-color;
+				&:hover {
+					color: $fourth-color;
+				}
+			}
+		}
+		&-box-two {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			width: 50%;
+			.icon {
+				width: 3.5rem;
+				height: 3.5rem;
+				color: $second-color;
+				&:hover {
+					color: $fourth-color;
+				}
+			}
+		}
+	}
+	.footer__copyright {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		margin: -1rem 0 1rem 0;
+		padding: 0 2rem;
+		font-size: 1.6rem;
+		height: 4rem;
+	}
+}
