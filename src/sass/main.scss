@@ -119,7 +119,7 @@ body {
 			}
 			.icon-tabler-chevron-down {
 				height: 100%;
-				width: 100%;
+				// width: 100%;
 				cursor: pointer;
 			}
 			&-item-projects {
@@ -128,8 +128,8 @@ body {
 
 			a:hover,
 			.icon-tabler-chevron-down:hover {
-				background-color: $fourth-color;
 				border-radius: 8px;
+				background-color: $fourth-color;
 			}
 			&-two {
 				display: none;
