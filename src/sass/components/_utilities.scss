@@ -1,9 +1,9 @@
+@use 'colors' as *;
 a {
 	text-decoration: none;
-	color: #fff;
-	// color: #000;
+	color: $second-font-color;
 	&:active {
-		color: #2c3e50;
+		color: $fifth-font-color;
 	}
 }
 ul {
@@ -21,7 +21,7 @@ h4 {
 h2,
 h3,
 h4 {
-	color: rgb(21, 15, 104);
+	color: $second-font-color;
 }
 h2 {
 	padding: 4rem;
@@ -39,7 +39,7 @@ section {
 .line {
 	height: 1px;
 	width: 100%;
-	background: #777;
+	background: $second-font-color;
 	margin: 2rem 0;
 }
 span.blinker {
