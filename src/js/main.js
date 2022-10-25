@@ -8,7 +8,7 @@ const projectsList = document.querySelector('.nav-mobile__list-two');
 const sections = document.querySelectorAll('header, section');
 const footerYear = document.querySelector('.footer__copyright-year');
 
-const messageArray = ['> Cześć, jestem Kuba,<br> > Witam na mojej stronie internetowej!'];
+const messageArray = [`> Hi, I'm Jakub,<br> > Welcome on my website!`];
 let txtPos = -10;
 const speed = 100;
 

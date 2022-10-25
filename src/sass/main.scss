@@ -193,6 +193,19 @@ body {
 			margin-bottom: 1rem;
 			text-align: justify;
 		}
+		&__images-box {
+			text-align: center;
+			svg {
+				width: 100px;
+				height: 100px;
+				margin-inline: 1rem;
+			}
+			&-title {
+				display: block;
+				font-size: 2.2rem;
+				margin-block: 2rem;
+			}
+		}
 	}
 	&__img {
 		margin: 2rem 0;
