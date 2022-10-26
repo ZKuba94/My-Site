@@ -1,7 +1,7 @@
 @use 'colors' as *;
 a {
 	text-decoration: none;
-	color: $second-font-color;
+	color: var(--second-font-color, $second-font-color);
 	&:active {
 		color: $fifth-font-color;
 	}
@@ -21,7 +21,7 @@ h4 {
 h2,
 h3,
 h4 {
-	color: $second-font-color;
+	color: var(--second-font-color, $second-font-color);
 }
 h2 {
 	padding: 4rem;
@@ -39,7 +39,7 @@ section {
 .line {
 	height: 1px;
 	width: 100%;
-	background: $second-font-color;
+	background: var(--second-font-color, $second-font-color);
 	margin: 2rem 0;
 }
 span.blinker {

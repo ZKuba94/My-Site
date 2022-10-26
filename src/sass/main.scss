@@ -18,17 +18,18 @@ html {
 body {
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
-	color: $second-font-color;
-	background-color: $second-bg-color;
+	color: var(--second-font-color, $second-font-color);
+	background-color: var(--second-bg-color, $second-bg-color);
 	main {
 		max-width: 1200px;
 		margin: auto;
 	}
 }
+
 .header {
 	position: relative;
 	background-image: url('../img/shaain-ibrahim-640.jpg');
-	color: $second-font-color;
+	color: var(--second-font-color, $second-font-color);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -38,13 +39,32 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	z-index: 1;
+	.theme-button {
+		position: relative;
+		background-color: var(--fourth-bg-color, $fourth-bg-color);
+		height: 3rem;
+		width: 6rem;
+		border-radius: 50px;
+		border: solid 2px var(--second-font-color, $second-font-color);
+		cursor: pointer;
+	}
+	.theme-icon {
+		content: '';
+		position: relative;
+		display: block;
+		background-color: #ffca1be5;
+		margin-left: 3px;
+		height: 2.3rem;
+		width: 2.3rem;
+		border-radius: 100%;
+	}
 	&-shadow {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-color: $second-shadow-color;
+		background-color: var(--second-shadow-color, $second-shadow-color);
 		z-index: -1;
 	}
 	&__textarea {
@@ -53,7 +73,6 @@ body {
 		align-items: center;
 		font-family: 'Roboto Mono', monospace;
 		margin: 0 6rem;
-		// font-weight: bold;
 		&-title {
 			text-align: left;
 			font-size: 2.8rem;
@@ -64,6 +83,7 @@ body {
 		height: 14rem;
 		width: 10rem;
 		transform: translateY(50%);
+		color: var(--second-font-color, $second-font-color);
 		&-item {
 			height: 14rem;
 			width: 10rem;
@@ -83,7 +103,7 @@ body {
 		width: 40vw;
 		left: -40vw;
 		border: none;
-		background-color: $fourth-bg-color;
+		background-color: var(--fourth-bg-color, $fourth-bg-color);
 		transition: transform 0.4s;
 		overflow: visible;
 		z-index: 10;
@@ -104,7 +124,7 @@ body {
 					left: 0;
 					height: 100%;
 					width: 2px;
-					background-color: $second-font-color;
+					background-color: var(--second-font-color, $second-font-color);
 					animation: navLine 0.3s linear;
 				}
 			}
@@ -157,8 +177,8 @@ body {
 			height: 5rem;
 			border-radius: 0 8px 8px 0;
 			border: none;
-			background-color: $fourth-bg-color;
-			color: $second-font-color;
+			background-color: var(--fourth-bg-color, $fourth-bg-color);
+			color: var(--second-font-color, $second-font-color);
 			animation: arrowMove 4s ease-in infinite;
 			transition: right 0.3s, transform 0.3s;
 			cursor: pointer;
@@ -199,6 +219,9 @@ body {
 				width: 100px;
 				height: 100px;
 				margin-inline: 1rem;
+				.git {
+					fill: var(--second-font-color, $second-font-color);
+				}
 			}
 			&-title {
 				display: block;
@@ -224,7 +247,7 @@ body {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: $second-shadow-color;
+			background-color: var(--second-shadow-color, $second-shadow-color);
 			z-index: -1;
 		}
 	}
@@ -260,7 +283,7 @@ body {
 			height: 100%;
 			top: 0;
 			left: 0;
-			background-color: $second-shadow-color;
+			background-color: var(--second-shadow-color, $second-shadow-color);
 			z-index: -1;
 		}
 		&-project-title {
@@ -272,7 +295,7 @@ body {
 		}
 		&-project-box {
 			position: relative;
-			background-color: $second-font-color;
+			background-color: var(--second-font-color, $second-font-color);
 			opacity: 0.8;
 			width: 80%;
 			height: 20rem;
@@ -345,15 +368,15 @@ body {
 				font-size: 1.1em;
 				padding: 1em;
 				width: 50%;
-				background-color: $fourth-bg-color;
-				color: $second-font-color;
+				background-color: var(--fourth-bg-color, $fourth-bg-color);
+				color: var(--second-font-color, $second-font-color);
 				border-radius: 8px;
 				border: none;
 				transition: background-color 0.3s, color 0.3s;
 				cursor: pointer;
 				&:hover {
-					background-color: $third-bg-color;
-					color: $first-font-color;
+					background-color: var(--third-bg-color, $third-bg-color);
+					color: var(--first-font-color, $first-font-color);
 				}
 			}
 		}
@@ -380,9 +403,9 @@ body {
 			}
 			.icon {
 				margin-left: 0.5rem;
-				color: $second-font-color;
+				color: var(--second-font-color, $second-font-color);
 				&:hover {
-					color: $fourth-font-color;
+					color: var(--fourth-font-color, $fourth-font-color);
 				}
 			}
 		}
@@ -395,9 +418,9 @@ body {
 			.icon {
 				width: 3.5rem;
 				height: 3.5rem;
-				color: $second-font-color;
+				color: var(--second-font-color, $second-font-color);
 				&:hover {
-					color: $fourth-font-color;
+					color: var(--fourth-font-color, $fourth-font-color);
 				}
 			}
 		}

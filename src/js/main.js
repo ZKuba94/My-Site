@@ -7,6 +7,7 @@ const projectsListBtn = document.querySelector('.icon-tabler-chevron-down');
 const projectsList = document.querySelector('.nav-mobile__list-two');
 const sections = document.querySelectorAll('header, section');
 const footerYear = document.querySelector('.footer__copyright-year');
+const switchingColorButton = document.querySelector('.theme-button');
 
 const messageArray = [`> Hi, I'm Jakub,<br> > Welcome on my website!`];
 let txtPos = -10;
@@ -51,14 +52,46 @@ window.onscroll = () => {
 	});
 };
 
-const handleCurrentYear = () => {
-	const year = new Date().getFullYear();
-	footerYear.innerText = year;
+// Swiching theme colors
+const changeColors = () => {
+	console.log(switchingColorButton);
+	switchingColorButton.classList.toggle('dark');
+	switchingColorButton.classList.toggle('light');
+	checkColors();
 };
 
+const checkColors = () => {
+	if (switchingColorButton.classList.contains('dark')) {
+		console.log('kod na light');
+		document.documentElement.style.setProperty('--second-bg-color', '#f8f9ff');
+		document.documentElement.style.setProperty('--first-font-color', '#f8f9ff');
+		document.documentElement.style.setProperty('--second-font-color', '#000000');
+		document.documentElement.style.setProperty('--third-bg-color', '#150f68');
+		document.documentElement.style.setProperty('--fourth-bg-color', '#2c23af');
+		document.documentElement.style.setProperty('--second-shadow-color', '#9695b68e');
+		document.documentElement.style.setProperty('--fourth-font-color', '#2c23af');
+	} else if (switchingColorButton.classList.contains('light')) {
+		console.log('kod na dark');
+		document.documentElement.style.setProperty('--second-bg-color', '#070e21');
+		document.documentElement.style.setProperty('--first-font-color', '#000000');
+		document.documentElement.style.setProperty('--second-font-color', '#f8f9ff');
+		document.documentElement.style.setProperty('--third-bg-color', '#2c23af');
+		document.documentElement.style.setProperty('--fourth-bg-color', '#150f68');
+		document.documentElement.style.setProperty('--second-shadow-color', '#150f6893');
+		document.documentElement.style.setProperty('--fourth-font-color', '#150f68');
+	}
+};
+
+function handleCurrentYear() {
+	const year = new Date().getFullYear();
+	footerYear.innerText = year;
+}
+
+switchingColorButton.addEventListener('click', changeColors);
 projectsListBtn.addEventListener('click', showProjectsList);
 navMobileItems.forEach(el => el.addEventListener('click', showNavMobile));
 navMobileBtn.addEventListener('click', showNavMobile);
 
+checkColors();
 typewriter();
 handleCurrentYear();
