@@ -41,22 +41,48 @@ body {
 	z-index: 1;
 	.theme-button {
 		position: relative;
-		background-color: var(--fourth-bg-color, $fourth-bg-color);
+		background-color: var(--second-font-color, $second-font-color);
 		height: 3rem;
 		width: 6rem;
 		border-radius: 50px;
-		border: solid 2px var(--second-font-color, $second-font-color);
+		border: none;
 		cursor: pointer;
-	}
-	.theme-icon {
-		content: '';
-		position: relative;
-		display: block;
-		background-color: #ffca1be5;
-		margin-left: 3px;
-		height: 2.3rem;
-		width: 2.3rem;
-		border-radius: 100%;
+		.dark {
+			content: '';
+			position: absolute;
+			top: 4px;
+			display: block;
+			background-color: #f7bf0a;
+			height: 2.2rem;
+			width: 2.2rem;
+			border-radius: 100%;
+			transform: translateX(145%);
+			transition: translate 0.5s;
+
+			&::before {
+				content: '';
+				position: absolute;
+				background-color: var(--second-font-color, $second-font-color);
+				height: 2.2rem;
+				width: 2.2rem;
+				border-radius: 100%;
+				transform: translateX(-85%);
+				transition: translate 0.5s;
+			}
+		}
+		.light {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 4px;
+			background-color: #ffca1be5;
+			margin-left: 2px;
+			height: 2.2rem;
+			width: 2.2rem;
+			border-radius: 100%;
+			transform: translateX(5%);
+			transition: translate 0.5s;
+		}
 	}
 	&-shadow {
 		position: absolute;
@@ -148,13 +174,14 @@ body {
 			a:hover,
 			.icon-tabler-chevron-down:hover {
 				border-radius: 8px;
-				background-color: $fifth-font-color;
+				background-color: var(--fifth-font-color, $fifth-font-color);
+				color: var(--first-font-color, $first-font-color);
 			}
 			&-two {
 				display: none;
 				margin-left: 1rem;
 				&-item:hover {
-					background-color: $fifth-font-color;
+					background-color: var(--fifth-font-color, $fifth-font-color);
 					border-radius: 8px;
 				}
 			}
@@ -184,7 +211,7 @@ body {
 			cursor: pointer;
 			z-index: 9;
 			&:hover {
-				background-color: $fifth-font-color;
+				background-color: var(--fifth-font-color, $fifth-font-color);
 			}
 			.icon {
 				width: 4rem;

@@ -6,53 +6,8 @@ $fourth-bg-color: #2c23af;
 $first-font-color: #ffffde;
 $second-font-color: #000000;
 
-$fifth-font-color: #150f68;
-// $fourth-font-color: #2c23af;
+$fifth-font-color: #2c23af;
 $fourth-font-color: #150f68;
-// $sixth-font-color: #2c3e50;
 
 $first-shadow-color: #150f6893;
 $second-shadow-color: #9695b68e;
-
-// .dark {
-// 	background-color: $first-bg-color;
-// 	color: $first-font-color;
-// }
-// // Light mode
-// body.light {
-// 	$second-bg-color: #ffffde;
-// 	$second-font-color: #000000;
-
-// 	$third-bg-color: #150f68;
-// 	$fourth-bg-color: #2c23af;
-// }
-// body.light .icon {
-// 	background: #ffca1be5;
-// 	transform: translateX(0);
-// }
-// body.light .icon::after {
-// 	content: none;
-// }
-
-// // Dark mode
-// body.dark {
-// 	$second-bg-color: #070e21;
-// 	$second-font-color: #ffffde;
-
-// 	$third-bg-color: #2c23af;
-// 	$fourth-bg-color: #150f68;
-// }
-// body.dark .icon {
-// 	background: #ffca1be5;
-// 	transform: translateX(50px);
-// }
-// body.dark .icon::after {
-// 	content: '';
-// 	position: absolute;
-// 	top: 5px;
-// 	display: block;
-// 	background-color: #070e21;
-// 	border-radius: 100%;
-// 	height: 2.3rem;
-// 	width: 2.3rem;
-// }
