@@ -13,6 +13,7 @@ const switchingIcon = switchingColorButton.querySelector('.theme-icon');
 const messageArray = [`> Hi, I'm Jakub,<br> > Welcome on my website!`];
 let txtPos = -10;
 const speed = 100;
+let theme = localStorage.getItem('theme') || 'dark';
 
 const typewriter = () => {
 	document.querySelector('.header__textarea-title').innerHTML =
@@ -54,12 +55,12 @@ window.onscroll = () => {
 };
 
 // Swiching theme colors
-const changeColors = () => {
-	console.log(switchingColorButton);
-	switchingColorButton.classList.toggle('dark');
-	switchingColorButton.classList.toggle('light');
-	switchingIcon.classList.toggle('dark');
-	switchingIcon.classList.toggle('light');
+const changeColors = (theme, secondColor) => {
+	switchingColorButton.classList.add(theme);
+	switchingColorButton.classList.remove(secondColor);
+	switchingIcon.classList.add(theme);
+	switchingIcon.classList.remove(secondColor);
+	localStorage.setItem('theme', theme);
 	checkColors();
 };
 
@@ -73,6 +74,7 @@ const checkColors = () => {
 		document.documentElement.style.setProperty('--second-shadow-color', '#9695b68e');
 		document.documentElement.style.setProperty('--fourth-font-color', '#2c23af');
 		document.documentElement.style.setProperty('--fifth-font-color', '#150f68');
+		theme = 'dark';
 	} else if (switchingColorButton.classList.contains('dark')) {
 		document.documentElement.style.setProperty('--second-bg-color', '#070e21');
 		document.documentElement.style.setProperty('--first-font-color', '#000000');
@@ -82,6 +84,15 @@ const checkColors = () => {
 		document.documentElement.style.setProperty('--second-shadow-color', '#150f6893');
 		document.documentElement.style.setProperty('--fourth-font-color', '#150f68');
 		document.documentElement.style.setProperty('--fifth-font-color', '#2c23af');
+		theme = 'light';
+	}
+};
+
+const checkTheme = () => {
+	if (theme === 'dark') {
+		changeColors('dark', 'light');
+	} else if (theme === 'light') {
+		changeColors('light', 'dark');
 	}
 };
 
@@ -90,11 +101,12 @@ function handleCurrentYear() {
 	footerYear.innerText = year;
 }
 
-switchingColorButton.addEventListener('click', changeColors);
 projectsListBtn.addEventListener('click', showProjectsList);
 navMobileItems.forEach(el => el.addEventListener('click', showNavMobile));
 navMobileBtn.addEventListener('click', showNavMobile);
+switchingColorButton.addEventListener('click', checkTheme);
 
-checkColors();
+// checkColors();
+checkTheme();
 typewriter();
 handleCurrentYear();
