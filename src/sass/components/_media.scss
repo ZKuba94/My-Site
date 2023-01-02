@@ -39,3 +39,15 @@
 		padding-inline: 10%;
 	}
 }
+@media (min-width: 1200px) {
+	section.projects {
+		p {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+	.about-me__textarea p {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
